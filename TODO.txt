@@ -11,6 +11,8 @@ Bugs
 * AccountManager -- OpenBSD fails "should add groups to a user" and "should add users to group".
 
 Needs improvement
+* TemplateManager -- Add #render :string option as alias for :text
+* DownloadManager -- Only download if needed
 * Interpreter -- #unique_methods should use :symbols
 * Interpreter#invoke and HelpfulERB -- Extract error context code into separate, reusable classes
 * FieldManager -- Wrap #lookup("my#deep#non-existent#path") with friendly exceptions
@@ -30,6 +32,8 @@ Needs redesign
 * Driver -- How to determine if a manager or driver method is available? Manager#available?, Manager#available and Driver#suitable? only say if it should be a default.
 
 New features
+* Stow Manager -- Add wrapper for GNU Stow
+* Debugger -- Add "debugger" to invoke ruby-debug for interactive development
 * ScheduleManager -- Design, or write wrapper for RubyCron or such
 * ProcessManger -- Design (provides "ps -ef" and such), add #pgrep and #pmatch methods
 * Shell -- Write #su(user, *command) as a wrapper around #sh
