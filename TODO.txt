@@ -1,5 +1,29 @@
 = AutomateIt's todo list
 
+BUGS, serious:
+* chperm, mkdir_p, chmod and others seemto ignore :mode and such
+* Generated Rakefile's :shell code "AutomateIt::CLI.run" fails to load project, workaround is "automateit -p ." but shouldn't be needed
+* Generated Rakefile's :all seems to to not see :preview for some reason.
+* ln_sf shouldn't keep relinking stuff
+
+BUGS, minor and simple:
+* generator should create an all.rb and Rakefile to invoke it
+* chown's output seems to lose the space between chown and group name
+* Make PackageManager::Gem do a "Gem.reload_paths" after changes so libraries can be loaded immediately
+* Backtrace from a custom class made in a lib doesn't list the code being executed. These files should be eval'ed with the name.
+* Never generate a backtrace that terminates within the interpreter's runner
+* UserManager: convert symbols to strings for group and user arguments
+* UserManager#add_user: escape the "description" because it often contains spaces
+* UserManager#remove_user: doesn't remove user's group
+* UserManager#password != passwd methods
+* Provide special exception when failing to return method that's available only in some drivers but not the current one
+* ai -p . without project should only show error, not give a trace
+* Previewing installs for an unavailable package manager should likely display that all would be installed rather than raising an error. E.g., previewing egg install without easy_install available. At least for
+* shell's mode should accept string and convert to hex
+
+BAD API
+* Edit's manipulate should not rely on return value of block, should only care about what changes were made to buffer ... right?
+
 === Software
 
 Bugs

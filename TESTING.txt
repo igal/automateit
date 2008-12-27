@@ -1,4 +1,4 @@
-== AutomateIt's self-test
+= AutomateIt's self-test
 
 AutomateIt ensures that it works correctly, and stays working, by using a rigorous self-test suite. This suite is written using the RSpec tool and its files are stored in the software installation's +spec+ directory. You must install the +rake+ and +rspec+ Gems to run the tests.
 
